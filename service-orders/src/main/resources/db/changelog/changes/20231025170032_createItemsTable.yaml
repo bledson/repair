@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: bledson
+      changes:
+        - createTable:
+            tableName: items
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: brand
+                  type: varchar(255)
+              - column:
+                  name: problemdescription
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: serviceorder_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_serviceorders_id
+                    references: serviceorders(id)
