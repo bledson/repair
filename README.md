@@ -11,3 +11,5 @@ Com o Docker em execução, rode o comando a seguir dentro da pasta de cada serv
 ```
 mvn spring-boot:run
 ```
+
+No projeto **supports** existe um usuário padrão criado, com usuário/senha "agent" que pode ser usado para obter o token de autenticação para uso nos endpoints protegidos
